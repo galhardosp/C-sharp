@@ -1,0 +1,183 @@
+namespace formulas
+{
+    public partial class frmcalculos : Form
+    {
+        public frmcalculos()
+        {
+            InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmcalculos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblresult_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtN1_TextChanged(object sender, EventArgs e)
+        {
+
+
+
+
+        }
+
+        private void btomais_Click(object sender, EventArgs e)
+        {
+
+            float n1;
+            float n2;
+            float result;
+
+
+            n1 = float.Parse(txtN1.Text);
+            n2 = float.Parse(txtN2.Text);
+
+            result = n1 + n2;
+
+            lblresult.Text = result.ToString();
+        }
+
+        private void btolimpar_Click(object sender, EventArgs e)
+        {
+            btovar.Text = "";
+            txtN1.Text = "";
+            txtN2.Text = "";
+            lblresult.Text = "0";
+            txtN1.Focus();
+
+        }
+
+        private void btoSair_Click(object sender, EventArgs e)
+        {
+
+            Application.Exit();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            float n1;
+            float n2;
+            float result;
+
+
+            n1 = float.Parse(txtN1.Text);
+            n2 = float.Parse(txtN2.Text);
+
+            result = n1 - n2;
+
+            lblresult.Text = result.ToString();
+
+
+
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            float n1;
+            float n2;
+            float result;
+            float result2;
+            float n3;
+            float res4;
+            
+
+            n1 = float.Parse(txtN1.Text);
+            n2 = float.Parse(txtN2.Text);
+            n3 = float.Parse(btovar.Text);
+
+            result = n1 + n2;
+            result2 = (n1 + n2) * (n3 / 100);
+          
+            
+            res4 = result + result2;
+
+            lblresult.Text = res4.ToString();
+
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            float n1;
+            float n2;
+            float result;
+            float result2;
+            float n3;
+            float res4;
+
+
+            n1 = float.Parse(txtN1.Text);
+            n2 = float.Parse(txtN2.Text);
+            n3 = float.Parse(btovar.Text);
+
+            result = n1 + n2;
+            result2 = (n1 + n2) * (n3 / 100);
+
+
+            res4 = result - result2;
+
+            lblresult.Text = res4.ToString();
+
+
+
+        }
+
+        private void btomult_Click(object sender, EventArgs e)
+        {
+
+            float n1;
+            float n2;
+            float result;
+
+
+            n1 = float.Parse(txtN1.Text);
+            n2 = float.Parse(txtN2.Text);
+
+            result = n1 * n2;
+
+            lblresult.Text = result.ToString();
+        }
+
+        private void btodiv_Click(object sender, EventArgs e)
+        {
+
+
+            float n1;
+            float n2;
+            float result;
+
+
+            n1 = float.Parse(txtN1.Text);
+            n2 = float.Parse(txtN2.Text);
+
+            result = n1 / n2;
+
+            lblresult.Text = result.ToString();
+
+
+        }
+
+        private void btovar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btovar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
