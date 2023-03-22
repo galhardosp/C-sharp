@@ -1,0 +1,160 @@
+namespace link
+{
+    public partial class frmcomp : Form
+    {
+        public frmcomp()
+        {
+            InitializeComponent();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmcomp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btocadastrar_Click(object sender, EventArgs e)
+        {
+
+
+            
+             int n1;
+
+             if (int.TryParse(txtcodigo.Text, out n1) == false)
+             {
+                 MessageBox.Show("O código precisa ser um número");
+                 return;           
+             }
+
+             int n2;
+
+             if (int.TryParse(txtnasc.Text, out n2) == false)
+             {
+                 MessageBox.Show("A data de nascimento precisa ser um número");
+                 return;
+             }
+
+             int n3;
+
+
+             if (int.TryParse(txtnum.Text, out n3) == false)
+             {
+                 MessageBox.Show("O número precisa ser um número");
+                 return;
+             }
+
+             int n4;
+
+             if (int.TryParse(txtCEP.Text, out n4) == false)
+             {
+                 MessageBox.Show("O número precisa ser um número");
+                 return;
+             }
+
+
+             int n5;
+
+             if (int.TryParse(txtsalario.Text, out n5) == false)
+             {
+                 MessageBox.Show("O salário precisa ser um número");
+                 return;
+             }
+            
+            
+            int n7;
+            if (int.TryParse(txttelefone.Text, out n7) == false)
+            {
+                MessageBox.Show("O telefone precisa ser um número");
+                return;
+
+            }
+
+
+
+
+
+                if (txtUF.Text != "AC" && 
+                txtUF.Text != "AL" && 
+                txtUF.Text != "AP" && 
+                txtUF.Text != "AM" && 
+                txtUF.Text != "BA" &&
+                txtUF.Text != "CE" &&
+                txtUF.Text != "ES" &&
+                txtUF.Text != "GO" &&
+                txtUF.Text != "MA" &&
+                txtUF.Text != "MT" &&
+                txtUF.Text != "MS" &&
+                txtUF.Text != "MG" &&
+                txtUF.Text != "PA" &&
+                txtUF.Text != "PB" &&
+                txtUF.Text != "PR" &&
+                txtUF.Text != "PE" &&
+                txtUF.Text != "PI" &&
+                txtUF.Text != "RJ" &&
+                txtUF.Text != "RN" &&
+                txtUF.Text != "RS" &&
+                txtUF.Text != "RO" &&
+                txtUF.Text != "RR" &&
+                txtUF.Text != "SC" &&
+                txtUF.Text != "SP" &&
+                txtUF.Text != "SE" &&
+                txtUF.Text != "TO" 
+                )
+            {
+                MessageBox.Show("Tem que ser um estado do Brasil");
+                return;
+            }
+
+
+
+
+
+
+
+            lblgrande.Text = "Código : " + txtcodigo.Text + "\n" + "Nome : "  + txtnome.Text + "\n" + "Sexo : " + txtsexo.Text + "\n" + "Nascimento : " + txtnasc.Text + "\n" + "Logradouro : " + txtlog.Text + "\n" + "Número : " + txtnum.Text + "\n" + "Complemento : " + txtcomple.Text + "\n" + "CEP : " + txtCEP.Text + "\n" + "Cidade : " + txtcidade.Text + "\n" + "UF : " + txtUF.Text + "\n" + "Salário : " + txtsalario.Text + "\n" + "Tel : " + txttelefone.Text + "\n" + "Email : " +txtemail.Text + "\n" + "Obs : " + txtObs.Text;
+        }
+
+        private void btolimp_Click(object sender, EventArgs e)
+        {
+            txtcodigo.Text = "";
+            txtnome.Text = "";
+            txtsexo.Text = "";
+            txtnasc.Text = "";
+            txtnum.Text = "";
+            txtcomple.Text = "";
+            txtCEP.Text = "";
+            txtcidade.Text = "";
+            txtUF.Text = "";
+            txtsalario.Text = "";
+            txttelefone.Text = "";
+            txtemail.Text = "";
+            txtObs.Text = "";
+            lblgrande.Text = "";
+            txtlog.Text = "";
+        }
+
+        private void lblgrande_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btosair_Click(object sender, EventArgs e)
+        {
+           this.Close();
+        }
+    }
+}
