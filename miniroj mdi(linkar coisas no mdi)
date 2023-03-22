@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace miniproj
+{
+    public partial class MDILEGAL : Form
+    {
+        private int childFormNumber = 0;
+
+        public MDILEGAL()
+        {
+            InitializeComponent();
+        }
+
+
+        private void MDILEGAL_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+             Produto P1 = new Produto();
+            this.Hide();
+             P1.Show();
+            
+
+        }
+
+        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            categoria cat = new categoria();
+            this.Hide();
+            cat.Show();
+        }
+
+        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            usuario usu = new usuario();
+            this.Hide();
+            usu.Show();
+        }
+
+        private void MDILEGAL_Load_1(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
