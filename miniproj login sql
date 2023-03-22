@@ -1,0 +1,74 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace miniproj
+{
+    public partial class pesquisacat : Form
+    {
+        public static string stringConexao = "" +
+            "Data Source=localhost;" +
+            "Initial Catalog=n8_miniprojeto;" +
+            "User ID=sa;" +
+            "Password=123456";
+
+        public pesquisacat()
+        {
+            InitializeComponent();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btoentrar_Click(object sender, EventArgs e)
+        {
+            string sql = "select * from usuario where " +
+                "login_usuario = '" + txtlogin.Text + "' and " +
+                "senha_usuario = '" + txtsenha.Text + "'";
+
+            SqlConnection conn = new SqlConnection(stringConexao);
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.CommandType = CommandType.Text;
+            SqlDataReader leitura;
+            conn.Open();
+
+            try
+            {
+                leitura = cmd.ExecuteReader();
+                if (leitura.Read())
+                {
+                    MessageBox.Show("Seja bem vindo");
+                    MDILEGAL frm = new MDILEGAL();
+                    frm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Usuário ou senha inválido");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+    }
+}
